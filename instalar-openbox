@@ -1,0 +1,10 @@
+#!/bin/bash
+apt-get install -y openbox xinit xterm menu python-xdg
+echo "# ~/.xinitrc
+
+# Abrir una terminal XTerm al iniciar
+/usr/bin/X11/xterm &
+
+# Iniciar el gestor de ventanas
+exec openbox-session" > /root/.xinitrc
+echo "Usa el comando startx para iniciarlo."
