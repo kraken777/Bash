@@ -1,0 +1,8 @@
+#!/bin/bash
+aptitude purge `dpkg --get-selections | grep gnome | cut -f 1` -y
+aptitude -f install
+aptitude purge `dpkg --get-selections | grep deinstall | cut -f 1` -y
+aptitude -f install
+echo "Se va a reiniciar"
+sleep 3
+init 6
